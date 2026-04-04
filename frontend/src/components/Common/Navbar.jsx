@@ -23,7 +23,7 @@ const Navbar = () => {
                 {/* Left - Logo */}
                 <div>
                     <Link to="/" className="text-2xl font-medium">
-                        Rabbit
+                        Dooms
                     </Link>
                 </div>
 
