@@ -22,7 +22,7 @@ const Checkout = () => {
         ],
         totalPrice: 2000
     }
-    const [checkoutId,setCheckoutId]=useState(null)
+    const [checkoutId, setCheckoutId] = useState(null)
     const navigate = useNavigate()
     const [shippingAddress, setShippingAddress] = useState({
         firstName: "",
@@ -33,12 +33,12 @@ const Checkout = () => {
         country: "",
         phone: ""
     })
-    const handleCreateCheckout  =(e)=>{
+    const handleCreateCheckout = (e) => {
         e.preventDefault()
         setCheckoutId(123)
     }
-    const handlePaymentSuccess = (details)=>{
-        console.log("Payment Successful",details)
+    const handlePaymentSuccess = (details) => {
+        console.log("Payment Successful", details)
         navigate("/order-confirmation")
     }
     return (
@@ -103,15 +103,15 @@ const Checkout = () => {
                         })} type="text" className="w-full p-2 border rounded" required />
                     </div>
                     <div className="mt-6">
-                        {!checkoutId?(
+                        {!checkoutId ? (
                             <button type='submit' className='w-full bg-black text-white py-3 rounded'>Continue to Payment</button>
-                        ):(
+                        ) : (
                             <div>
                                 <h3 className='text-lg mb-4'>Pay with Paypal</h3>
                                 {/* Paypal button */}
-                                <PayPalButton amount={100} 
-                                onSuccess={handlePaymentSuccess}
-                                onError={(err)=>alert("Payment faild.Try again.")}
+                                <PayPalButton amount={100}
+                                    onSuccess={handlePaymentSuccess}
+                                    onError={(err) => alert("Payment faild.Try again.")}
                                 />
                             </div>
                         )}
@@ -122,7 +122,7 @@ const Checkout = () => {
             <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className='text-lg mb-4'>Order Summary</h3>
                 <div className='border-t py-4 mb-4'>
-                    {cart.products.map((product,index)=>(
+                    {cart.products.map((product, index) => (
                         <div key={index} className='flex items-start justify-between py-2 border-b'>
                             <div className="flex items-start">
                                 <img src={product.image} alt={product.name} className='w-20 h-24 object-cover' />

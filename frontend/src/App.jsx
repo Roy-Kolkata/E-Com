@@ -9,6 +9,9 @@ import CollectionPage from "./components/pages/CollectionPage"
 import ProductDetails from "./components/Products/ProductDetails"
 import Checkout from "./components/Cart/Checkout"
 import OrderConfirmationPage from "./components/pages/OrderConfirmationPage"
+import OrderDetailsPage from "./components/pages/OrderDetailsPage"
+import MyOrdersPage from "./components/pages/MyOrdersPage"
+import AdminLayout from "./components/Admin/AdminLayout"
 
 function App() {
 
@@ -26,8 +29,10 @@ function App() {
           <Route path="product/:id" element={<ProductDetails/>}/>
           <Route path="checkout" element={<Checkout/>}/>
           <Route path="order-confirmation" element={<OrderConfirmationPage/>}/>
+          <Route path="order/:id" element={<OrderDetailsPage/>}/>
+          <Route path="/my-orders" element={<MyOrdersPage/>}/>
         </Route>
-        <Route>{/*Admin layout*/}</Route>
+        <Route path="/admin" element={<AdminLayout/>}>{/*Admin layout*/}</Route>
       </Routes>
     </BrowserRouter>
   )

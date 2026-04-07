@@ -24,7 +24,7 @@ const Footer = () => {
                 <div>
                     <h3 className='text-lg  text-gray-800 mb-4'>Shop</h3>
                     <ul className='space-y-2 text-gray-800'>
-                        <li>
+                        <li className='flex flex-col gap-2'>
                             <Link to="#" className="hover:text-gray-500 transition-colors">Men's top wear</Link>
                             <Link to="#" className="hover:text-gray-500 transition-colors">Women's top wear</Link>
                             <Link to="#" className="hover:text-gray-500 transition-colors">Men's bottom wear</Link>
@@ -36,7 +36,7 @@ const Footer = () => {
                 <div>
                     <h3 className='text-lg  text-gray-800 mb-4'>Support</h3>
                     <ul className='space-y-2 text-gray-800'>
-                        <li>
+                        <li className='flex flex-col gap-2'>
                             <Link to="#" className="hover:text-gray-500 transition-colors">Contact us</Link>
                             <Link to="#" className="hover:text-gray-500 transition-colors">About us</Link>
                             <Link to="#" className="hover:text-gray-500 transition-colors">FAQ's</Link>
