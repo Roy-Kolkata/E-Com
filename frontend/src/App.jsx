@@ -12,6 +12,11 @@ import OrderConfirmationPage from "./components/pages/OrderConfirmationPage"
 import OrderDetailsPage from "./components/pages/OrderDetailsPage"
 import MyOrdersPage from "./components/pages/MyOrdersPage"
 import AdminLayout from "./components/Admin/AdminLayout"
+import AdminHome from "./components/pages/AdminHome"
+import Usermanagement from "./components/Admin/Usermanagement"
+import ProductManagement from "./components/Admin/ProductManagement"
+import EditProductPage from "./components/Admin/EditProductPage"
+import OrderManagement from "./components/Admin/OrderManagement"
 
 function App() {
 
@@ -32,7 +37,14 @@ function App() {
           <Route path="order/:id" element={<OrderDetailsPage/>}/>
           <Route path="/my-orders" element={<MyOrdersPage/>}/>
         </Route>
-        <Route path="/admin" element={<AdminLayout/>}>{/*Admin layout*/}</Route>
+        <Route path="/admin" element={<AdminLayout/>}>{/*Admin layout*/}
+        <Route index element={<AdminHome/>}/>
+        <Route path="user" element={<Usermanagement/>}/>
+        <Route path="products" element={<ProductManagement/>}/>
+        <Route path="product/:id/edit" element={<EditProductPage/>}/>
+        <Route path="orders" element={<OrderManagement/>}/>
+
+        </Route>
       </Routes>
     </BrowserRouter>
   )
